@@ -201,6 +201,27 @@ class Car: Transport {
         print("Vroom-Vroom")
     }
 }
+// Optionals
+var one: String? = "i love"
+var two: String? = "Skillfactory"
+
+var result = one! + two! //принудительное извлечение данных
+print(result)
+
+//косвенное извелечение данных
+var pen:Int! = 20
+var pencil:Int = 10
+
+let penpencil = pen + pencil
+print(penpencil)
+
+
+// оператор объединения no nil
+var i: Int? = nil
+var u: Int = 6
+
+let iu = (i ?? 0) + u // если i не равен nil то принудительно извлекается i, иначе вернуть значение b
+print(iu)
 
 
 
