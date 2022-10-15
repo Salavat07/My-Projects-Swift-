@@ -128,3 +128,37 @@ let blackPawn = "\(Chessmen.Color.black.rawValue): \(Chessmen.pawn.rawValue)"
 
 nameChessmen(figures: a,whiteKing,whiteQueen,whiteBishop,whiteKnight,whiteRook,whitePawn,a)
 nameChessmen(figures: blackKing,blackQueen,blackBishop,blackKnight,blackRook,blackPawn,a)
+
+
+indirect enum Arithmatic {
+    case addition (Float, Float, Float)
+    case substration (Float, Float, Float)
+    case multiplication (Float, Float, Float)
+    case division (Float, Float, Float)
+    
+    func compulation (arithmatic: Arithmatic) -> Float{
+        switch arithmatic{
+        case let.addition(numberOne, numberTwo, numberThree):
+            return numberOne + (numberTwo - numberThree)
+        case let.substration(numberOne, numberTwo, numberThree):
+            return (numberOne - numberTwo) + numberThree
+        case let.multiplication(numberOne, numberTwo, numberThree):
+            return numberOne * (numberTwo / numberThree)
+        case let.division(numberOne, numberTwo, numberThree):
+            return (numberOne / numberTwo) * numberThree
+        }
+    }
+}
+let addition = Arithmatic.addition(25, 332, 40)
+addition.compulation(arithmatic: addition)
+let substraction = Arithmatic.substration(330, 230,50)
+substraction.compulation(arithmatic: substraction)
+let multiplication = Arithmatic.multiplication(30, 220,10)
+multiplication.compulation(arithmatic: multiplication)
+let division = Arithmatic.division(330, 16, 30)
+division.compulation(arithmatic: division)
+
+
+
+
+
