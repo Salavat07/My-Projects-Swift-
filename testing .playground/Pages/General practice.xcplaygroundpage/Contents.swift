@@ -392,22 +392,6 @@ let countsString = counts.map{String($0)}
 print(countsString)
 
 
-// generics and closures
-
-//var arr = [2,4,6,8]
-//
-//func myMap<T>(for aarray:[Int], _ transform: (Int) -> T) -> [T] {
-//    var rezult: [T] = []
-//    for ellemment in aarray {
-//        rezult.append(transform(ellemment))
-//    }
-//    return rezult
-//}
-//
-//let rez1 = myMap(to: arr) { $0 + 2 }
-//let rez2 = myMap(to: arr) { $0 + $0 }
-//let rez3 = myMap(to: arr) { String($0) }
-
 
 
 

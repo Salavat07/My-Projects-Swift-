@@ -37,24 +37,41 @@ for month in 0...month {
 print(count + whichdays)
 
 // 3 task
-var amountOfStudents: [String:Int] = ["Kaliev Salavat": 100, "Maratov Adilkhan": 80, "Mamytov Daniar": 60]
-amountOfStudents.updateValue(60, forKey: "Mamytov Daniar")
+var amountOfStudents: [String:Int] = ["Kaliev Salavat": 3, "Maratov Adilkhan": 4, "Mamytov Daniar": 2]
+amountOfStudents.updateValue(2, forKey: "Mamytov Daniar")
 print(amountOfStudents)
 
-if {
-    print("You passed")
-}
-else {
-    print("Not passed")
-}
-
-amountOfStudents ["Islam Makhachev"] = 70
-amountOfStudents ["Conor Macregor"] = 60
-amountOfStudents ["Jon Jones"] = 100
+amountOfStudents ["Islam Makhachev"] = 4
+amountOfStudents ["Conor Macregor"] = 3
+amountOfStudents ["Jon Jones"] = 5
 print(amountOfStudents)
 
 amountOfStudents.removeValue(forKey:"Islam Makhachev")
 
-func average(){
-    
+for i in amountOfStudents.values{
+    if i >= 3{
+        print("You passed \(i)")
+    }else{
+        print("You didnt passed \(i)")
+    }
 }
+
+amountOfStudents ["Islam Makhachev"] = 4
+amountOfStudents ["Conor Macregor"] = 3
+amountOfStudents ["Jon Jones"] = 5
+print(amountOfStudents)
+
+amountOfStudents.removeValue(forKey:"Islam Makhachev")
+
+print(amountOfStudents.values)
+
+func average()->(Float){
+    var count = 0
+    var countOfValues = 0
+    for i in amountOfStudents.values{
+        count += i
+        countOfValues += 1
+}
+    return Float(count/countOfValues)
+}
+print(average())
