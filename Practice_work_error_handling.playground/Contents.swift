@@ -92,3 +92,5 @@ func ErrorThrowing <T:Equatable> (a:T, b:T) throws{
     }
     TypesComparison(first: 9, second: 11.0)
 
+
+>1234567890-=ПАИВЧЫМЯФЧ]>11 >
