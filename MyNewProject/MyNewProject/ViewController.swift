@@ -10,31 +10,39 @@ import UIKit
 class ViewController: UIViewController {
     
     
-    @IBOutlet weak var stackview: UIStackView!
-    
-    @IBOutlet weak var but: UIButton!
-    
-    @IBOutlet weak var label: UILabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    /*    stackview.axis = .horizontal
-        stackview.alignment = .fill
-        stackview.distribution = .equalCentering
-        stackview.spacing = 20 */
-}
-    
-    
-    @IBAction func but1(_ sender: UIButton) {
-        label.backgroundColor = .green
-    //    label.font = UIFont(name: "Times New ROman", size: 30)
-        label.alpha = 0
-      //  stackview.backgroundColor = .green
-    }
-    
-    }
+    @IBOutlet weak var rightBarButtonItem: UIBarButtonItem!
     
 
+  
+    
+    @IBOutlet weak var emodjiTextField: UITextView!
+    
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            rightBarButtonItem.title = "Settings"
+            rightBarButtonItem.target = self
+            rightBarButtonItem.action = #selector(edit)
+            rightBarButtonItem.style = .done
+
+
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+            view.addGestureRecognizer(tap)
+        }
+    
+    
+    @objc func edit() {
+        print("Edit is done")
+    }
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            guard segue.identifier == "emodji" else { return }
+            guard let destination = segue.destination as? SecondViewController else { return }
+                destination.emodji = emodjiTextField.text ?? ""
+        }
+    
+    // При нажатии на любое место экрана клавиатура скроется
+        @objc func dismissKeyboard() {
+          view.endEditing(true)
+        }
+    }
 
 
