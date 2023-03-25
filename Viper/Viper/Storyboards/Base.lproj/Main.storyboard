@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Login View" id="BYZ-38-t0r" customClass="LoginView" customModule="Viper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mn-Xb-fvf">
+                                <rect key="frame" x="131.66666666666666" y="398.66666666666669" width="129.99999999999997" height="80"/>
+                                <color key="backgroundColor" red="0.88364783359999999" green="0.88675380609999999" blue="0.89607172369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="JGh-O7-S5r"/>
+                                    <constraint firstAttribute="width" constant="130" id="aTn-yP-XsB"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Login"/>
+                                <connections>
+                                    <action selector="loginBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vVP-VW-oQH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Mn-Xb-fvf" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="eEv-lg-wJj"/>
+                            <constraint firstItem="5Mn-Xb-fvf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tMP-DF-y5L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginBtn" destination="5Mn-Xb-fvf" id="E95-0A-8A2"/>
+                        <segue destination="oAh-AD-6Mt" kind="presentation" identifier="LoginToHome" id="xvE-Tp-4gr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10" y="4"/>
+        </scene>
+        <!--Home View-->
+        <scene sceneID="k2V-LE-PtJ">
+            <objects>
+                <viewController title="Home View" modalPresentationStyle="fullScreen" id="oAh-AD-6Mt" customClass="HomeView" customModule="Viper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O40-cl-3dR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHc-GZ-VvM">
+                                <rect key="frame" x="75" y="338" width="242" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83471964249999997" green="0.83765363520000002" blue="0.84645561319999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="showImage"/>
+                                <connections>
+                                    <action selector="showPhotoBtnPressed:" destination="oAh-AD-6Mt" eventType="touchUpInside" id="Zrd-S1-Qdq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4to-n5-Ygb">
+                                <rect key="frame" x="94" y="454" width="204" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83471964249999997" green="0.83765363520000002" blue="0.84645561319999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="logout"/>
+                                <connections>
+                                    <action selector="logOutBtnPressed:" destination="oAh-AD-6Mt" eventType="touchUpInside" id="ai2-Yh-JYn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="L30-oW-zRe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="logOutBtn" destination="4to-n5-Ygb" id="wSQ-Im-8kM"/>
+                        <outlet property="showPhotoBtn" destination="aHc-GZ-VvM" id="Uee-J6-bHo"/>
+                        <segue destination="SBp-ek-GgT" kind="presentation" identifier="HomeToPhoto" id="a3Q-j7-aOU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="11S-o9-7XG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="785.49618320610682" y="3.5211267605633805"/>
+        </scene>
+        <!--Photo View-->
+        <scene sceneID="vhk-Jp-SlR">
+            <objects>
+                <viewController title="Photo View" modalPresentationStyle="fullScreen" id="SBp-ek-GgT" customClass="PhotoView" customModule="Viper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qPn-46-AFo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="female" translatesAutoresizingMaskIntoConstraints="NO" id="y3B-tg-IvS">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txu-p8-GvU">
+                                <rect key="frame" x="20" y="79" width="86.333333333333329" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="rm5-Go-ihu"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="27"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backToHome:" destination="SBp-ek-GgT" eventType="touchUpInside" id="yvR-fG-GgX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Goa-pW-9NS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="y3B-tg-IvS" firstAttribute="leading" secondItem="Goa-pW-9NS" secondAttribute="leading" id="ERU-yx-jXe"/>
+                            <constraint firstItem="Goa-pW-9NS" firstAttribute="bottom" secondItem="y3B-tg-IvS" secondAttribute="bottom" id="NCO-Jy-AvU"/>
+                            <constraint firstItem="y3B-tg-IvS" firstAttribute="top" secondItem="Goa-pW-9NS" secondAttribute="top" id="VCx-J4-y4r"/>
+                            <constraint firstItem="txu-p8-GvU" firstAttribute="top" secondItem="Goa-pW-9NS" secondAttribute="top" constant="20" id="X1c-Hq-gUc"/>
+                            <constraint firstItem="Goa-pW-9NS" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="txu-p8-GvU" secondAttribute="trailing" symbolic="YES" id="noX-jz-fH2"/>
+                            <constraint firstItem="Goa-pW-9NS" firstAttribute="trailing" secondItem="y3B-tg-IvS" secondAttribute="trailing" id="oa2-ba-8n1"/>
+                            <constraint firstItem="txu-p8-GvU" firstAttribute="leading" secondItem="Goa-pW-9NS" secondAttribute="leading" constant="20" id="wX9-gf-4Eb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoImage" destination="y3B-tg-IvS" id="RBl-ew-sAM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ox4-66-vgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1542.7480916030534" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Login" width="413" height="236"/>
+        <image name="female" width="428" height="902"/>
+        <image name="logout" width="413" height="206"/>
+        <image name="showImage" width="520" height="219"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
